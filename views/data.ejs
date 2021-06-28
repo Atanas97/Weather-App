@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Weather App Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/25a7d28d82.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+
+
+    <section class="weather-app">
+        <!-- <%= email %> -->
+
+        <div class="user-info">
+            <p>Hello <span class="user">
+                    <%= name %>
+                </span>, what's the weather today?</p>
+
+            <div class="abc">
+                <a href="/logout" class="btn w-100 submit-btn">Logout</a>
+            </div>
+        </div>
+
+        <div class="container-mine container text-center">
+            <span class="search">
+                <input type="text" id="search-bar" placeholder="Enter a city..." class="search-location">
+                <button class="btn shadow-none" id="search-city"><i class="fas fa-search-location "></i></button>
+            </span>
+            <div class="app-details none">
+                <h3></h3>
+                <img>
+                <p></p>
+                <span class="d-flex justify-content-around align-items-center">
+                    <small class="min-temp"></small>
+                    <h2></h2>
+                    <small class="max-temp"></small>
+                </span>
+                <div class="weather-info">
+                    <div class="weather-data">
+                        <span data-tooltip="Wind speed" class="wind"></span>
+                        <!-- <div class="tooltip-info">
+							<p>Скорост на вятъра</p>
+						</div> -->
+                    </div>
+
+                    <div class="weather-data">
+                        <span data-tooltip="Humidity" class="humidity"></span>
+                        <!-- <div class="tooltip-info">
+							<p>Humidity</p>
+						</div> -->
+                    </div>
+
+                    <div class="weather-data">
+                        <span data-tooltip="Pressure" class="pressure"></span>
+                        <!-- <div class="tooltip-info">
+							<p>Атмосферно налягане</p>
+						</div> -->
+                    </div>
+                </div>
+                <span class="flex measure-units">
+                    <h4>Temperature</h4>
+                    <p class="cels">Celsius <i class="fas fa-chevron-right arrow1"></i></p>
+                </span>
+                <div class="measure">
+                    <ul>
+                        <li>Celsius</li>
+                        <li id="fahrenheit">Fahrenheit</li>
+                    </ul>
+                </div>
+                <span class="flex measure-units">
+                    <h4>Wind Speed</h4>
+                    <p class="wind-speed">m/s <i class="fas fa-chevron-right arrow2"></i></p>
+                </span>
+                <div class="measure speed">
+                    <ul>
+                        <li>m/s</li>
+                        <li>km/h</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <button class="five-day-btn d-flex">Show 5 day forecast</button>
+        <div class="container">
+
+            <div class="days mb-5">
+                <!-- <div class="load-days">
+					<h1>${oneDay.main.temp}</h1>
+					<h2>${oneDay.main.feels_like}</h2>
+					<p>${oneDay.dt_txt}</p>
+				</div> -->
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
+
+<!-- <div>
+			<p>Profile Detail</p>
+		</div>
+		<div>
+			<h1>Hello</h1>
+			<center>
+				<table class="table table-hover text-center">
+					<tr>
+						<td>Name </td>
+						<td>
+							<%= name %>
+						</td>
+					</tr>
+					<tr>
+						<td>Email </td>
+						<td>
+							<%= email %>
+						</td>
+					</tr>
+				</table>
+			</center>
+		</div> -->
